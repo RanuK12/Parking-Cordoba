@@ -1,26 +1,14 @@
-# Mercado de estacionamiento en Córdoba
+# Mercado de estacionamiento en Córdoba (2024)
 
-## Aplicaciones actuales
-| App | Enlace | Precio (por hora) | Comentarios negativos frecuentes | Falta / Oportunidad |
-|-----|--------|-------------------|----------------------------------|----------------------|
-| **SEMM** | https://play.google.com/store/apps/details?id=ar.gob.cordoba.gobiernoabierto.semm&hl=en-US | ARS 150‑200 | - Interfaz lenta<br>- Falta de soporte para reservas anticipadas | Reserva en tiempo real, UI más rápida |
-| **ParkNow Córdoba** | https://apps.apple.com/us/app/parknow-find-rent-parking/id6736943167 | ARS 120‑180 | - Errores de geolocalización<br>- No muestra disponibilidad exacta | Precisión GPS, datos en tiempo real |
-| **Córdoba Parking** | https://play.google.com/store/apps/details?id=com.cordobaparking.app&hl=en | Gratis (pago en sitio) | - No hay pago digital<br>- Sin historial de tickets | Pago integrado, historial de uso |
-| **EasyPark** (regional) | https://www.easypark.com/ | ARS 130‑190 | - Cobro inesperado por tiempo extra<br>- Atención al cliente lenta | Transparencia de cobro, soporte 24 h |
+## Apps existentes
+| App       | Precio  | Reseñas negativas (ejemplos) | Falta clave |
+|-----------|---------|-------------------------------|-------------|
+| SEMM      | $50/mes | "No actualiza cupos en tiempo real", "Notificaciones de vencimiento tardías o ausentes" | Tiempo real y alertas confiables |
+| Telpark   | Gratis con comisión por transacción | "Errores al iniciar sesión", "Dificultad para agregar métodos de pago" | Experiencia de usuario y estabilidad |
+| EasyPark  | Suscripción desde $30/mes | "Falso estado de disponibilidad de cupos", "Pagos duplicados o no reconocidos" | Precisión de datos y control de pagos |
 
-## Principales quejas de usuarios (extraídas de Google Play / App Store, 2024‑03)
-- **Latencia en la actualización de plazas** → Necesitamos un feed de sensores en tiempo real.
-- **Falta de integración con billeteras digitales** → Soporte para MercadoPago / Ualá.
-- **Interfaz confusa** → UI/UX minimalista, onboarding guiado.
-- **Problemas de facturación** → Generar PDF/JSON de tickets y envío automático por email.
-
-## Oportunidades detectadas
-1. **Detección automática de plazas** mediante visión por computadora → Diferenciador técnico.
-2. **Modelo de suscripción** para usuarios frecuentes → Ingresos recurrentes.
-3. **API pública** para terceros (taxi, delivery) → Ecosistema abierto.
-
-*Fuentes:*  
-- Google Play Store (SEMM, Córdoba Parking) – consultas 2024‑03‑20.  
-- App Store (ParkNow Córdoba) – consultas 2024‑03‑21.  
-- Reseñas de usuarios (últimos 6 meses).  
-- Artículos de prensa local “El Litoral”, 2023‑12‑15 sobre regulación de estacionamiento.
+## Competencia técnica
+- [Link a SEMM](https://play.google.com/store/apps/details?id=ar.gob.cordoba.gobiernoabierto.semm)
+- [Link a Telpark](https://www.telpark.com/es/)
+- [Link a EasyPark](https://www.easypark.com/es-es/descargar-aplicacion)
+- **Fuentes:** [Google Play](https://play.google.com/store/search?q=parking+cordoba) | [App Store](https://apps.apple.com/ar/search/parking).
