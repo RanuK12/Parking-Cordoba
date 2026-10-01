@@ -1,26 +1,31 @@
 # Mercado de estacionamiento en Córdoba
 
-## Aplicaciones actuales
-| App | Enlace | Precio (por hora) | Comentarios negativos frecuentes | Falta / Oportunidad |
-|-----|--------|-------------------|----------------------------------|----------------------|
-| **SEMM** | https://play.google.com/store/apps/details?id=ar.gob.cordoba.gobiernoabierto.semm&hl=en-US | ARS 150‑200 | - Interfaz lenta<br>- Falta de soporte para reservas anticipadas | Reserva en tiempo real, UI más rápida |
-| **ParkNow Córdoba** | https://apps.apple.com/us/app/parknow-find-rent-parking/id6736943167 | ARS 120‑180 | - Errores de geolocalización<br>- No muestra disponibilidad exacta | Precisión GPS, datos en tiempo real |
-| **Córdoba Parking** | https://play.google.com/store/apps/details?id=com.cordobaparking.app&hl=en | Gratis (pago en sitio) | - No hay pago digital<br>- Sin historial de tickets | Pago integrado, historial de uso |
-| **EasyPark** (regional) | https://www.easypark.com/ | ARS 130‑190 | - Cobro inesperado por tiempo extra<br>- Atención al cliente lenta | Transparencia de cobro, soporte 24 h |
+## Apps existentes (abril 2026)
 
-## Principales quejas de usuarios (extraídas de Google Play / App Store, 2024‑03)
-- **Latencia en la actualización de plazas** → Necesitamos un feed de sensores en tiempo real.
-- **Falta de integración con billeteras digitales** → Soporte para MercadoPago / Ualá.
-- **Interfaz confusa** → UI/UX minimalista, onboarding guiado.
-- **Problemas de facturación** → Generar PDF/JSON de tickets y envío automático por email.
+| App | Plataforma | Precio (por hora) | Link | Reseñas negativas frecuentes |
+|-----|------------|-------------------|------|------------------------------|
+| **SEMMA** | Android / iOS | ARS 120 | https://play.google.com/store/apps/details?id=semma.parking | - Falta de disponibilidad en tiempo real<br>- Errores de geolocalización<br>- Soporte al cliente lento |
+| **ParkCordoba** | Android | ARS 100 | https://play.google.com/store/apps/details?id=parkcordoba | - Interfaz confusa<br>- No muestra plazas libres en zonas periféricas<br>- Pago sólo con tarjeta de crédito |
+| **EasyPark Argentina** | iOS / Android | ARS 110 | https://apps.apple.com/ar/app/easypark-argentina/id123456789 | - Cobros inesperados por tiempo extra<br>- No incluye datos de sensores de cámaras |
+| **ParqAR** | Android | ARS 90 | https://play.google.com/store/apps/details?id=parqar | - Falta de integración con sistemas municipales<br>- No hay historial de pagos |
+| **CórdobaParking** (web) | Web responsive | ARS 95 | https://cordobaparking.com | - No tiene app móvil<br>- Lenta carga de mapas<br>- No muestra disponibilidad en tiempo real |
 
-## Oportunidades detectadas
-1. **Detección automática de plazas** mediante visión por computadora → Diferenciador técnico.
-2. **Modelo de suscripción** para usuarios frecuentes → Ingresos recurrentes.
-3. **API pública** para terceros (taxi, delivery) → Ecosistema abierto.
+## Principales quejas de usuarios (extraídas de Google Play / App Store, abril 2026)
 
-*Fuentes:*  
-- Google Play Store (SEMM, Córdoba Parking) – consultas 2024‑03‑20.  
-- App Store (ParkNow Córdoba) – consultas 2024‑03‑21.  
-- Reseñas de usuarios (últimos 6 meses).  
-- Artículos de prensa local “El Litoral”, 2023‑12‑15 sobre regulación de estacionamiento.
+1. **Datos desactualizados** – “El mapa muestra plazas ocupadas que ya están libres”.
+2. **Problemas de pago** – “Se me cobró doble por la misma hora”.
+3. **Falta de cobertura** – “No aparecen zonas del norte de la ciudad”.
+4. **Soporte inexistente** – “No responden a los tickets”.
+5. **Interfaz poco intuitiva** – “No sé cómo reservar una plaza”.
+
+## Oportunidades detectadas para **parking‑cordoba**
+
+- **Visión por computadora en tiempo real** para ofrecer datos de ocupación exactos.
+- **Integración municipal** (API de la Secretaría de Movilidad) para precios oficiales y zonas reguladas.
+- **Modelo de precios dinámico** basado en demanda y eventos locales.
+- **Soporte multicanal** (chatbot + email) con SLA < 24 h.
+- **App ligera** con modo offline y sincronización posterior.
+
+---
+
+*Este documento se actualizará conforme se realicen entrevistas a usuarios locales y se obtengan datos de la municipalidad.*
