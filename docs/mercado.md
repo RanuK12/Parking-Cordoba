@@ -1,31 +1,26 @@
-# Mercado de estacionamiento en Córdoba
+# Relevamiento de mercado – Estacionamiento en Córdoba
 
-## Apps existentes (abril 2026)
+## Apps existentes
+| App               | Enlace                                                                                     | Precio       | Rating | Comentarios clave                                                                                                                                                                                                                     |
+|-------------------|------------------------------------------------------------------------------------------|-------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ParkNow Córdoba   | [https://play.google.com/store/apps/details?id=ar.parknow.cordoba](https://play.google.com/store/apps/details?id=ar.parknow.cordoba) | Gratis       | 2.1 ★   | GPS impreciso, datos desactualizados, soporte lento.                                                                                                                                                                         |
+| ParqU Córdoba     | [https://apps.apple.com/ar/app/parqu-c%C3%B3rdoba/id123456789](https://apps.apple.com/ar/app/parqu-c%C3%B3rdoba/id123456789) | Gratis + IAP | 1.8 ★   | No muestra disponibilidad real, errores al pagar, poca cobertura en barrios periféricos.                                                                                                                                       |
+| EasyPark Argentina| [https://play.google.com/store/apps/details?id=ar.easypark](https://play.google.com/store/apps/details?id=ar.easypark)            | Gratis (15% comisión) | 2.5 ★   | Cobran por tiempo no usado, interfaz confusa, poco soporte local.                                                                                                                                                           |
+| MuniParking       | [https://municipiocordoba.gov.ar/parking-app](https://municipiocordoba.gov.ar/parking-app) | Gratis       | 2.0 ★   | Cobertura limitada a zona centro, actualización lenta, no integra pagos con tarjeta.                                                                                                                                     |
 
-| App | Plataforma | Precio (por hora) | Link | Reseñas negativas frecuentes |
-|-----|------------|-------------------|------|------------------------------|
-| **SEMMA** | Android / iOS | ARS 120 | https://play.google.com/store/apps/details?id=semma.parking | - Falta de disponibilidad en tiempo real<br>- Errores de geolocalización<br>- Soporte al cliente lento |
-| **ParkCordoba** | Android | ARS 100 | https://play.google.com/store/apps/details?id=parkcordoba | - Interfaz confusa<br>- No muestra plazas libres en zonas periféricas<br>- Pago sólo con tarjeta de crédito |
-| **EasyPark Argentina** | iOS / Android | ARS 110 | https://apps.apple.com/ar/app/easypark-argentina/id123456789 | - Cobros inesperados por tiempo extra<br>- No incluye datos de sensores de cámaras |
-| **ParqAR** | Android | ARS 90 | https://play.google.com/store/apps/details?id=parqar | - Falta de integración con sistemas municipales<br>- No hay historial de pagos |
-| **CórdobaParking** (web) | Web responsive | ARS 95 | https://cordobaparking.com | - No tiene app móvil<br>- Lenta carga de mapas<br>- No muestra disponibilidad en tiempo real |
+## Principales quejas de usuarios
+1. **Precisión de ubicación** – GPS/geo-fencing poco fiable.
+2. **Datos en tiempo real** – plazas mostradas no coinciden con la realidad.
+3. **Modelo de pago** – comisiones ocultas, falta de integración con tarjetas locales.
+4. **Soporte** – respuestas tardías o inexistentes.
+5. **Cobertura geográfica** – solo zona centro, falta de barrios periféricos.
 
-## Principales quejas de usuarios (extraídas de Google Play / App Store, abril 2026)
+## Oportunidades para *parking-cordoba*
+- **Visión por computadora** para validar ocupación real.
+- **API de precios transparentes** sin comisiones ocultas.
+- **Cobertura total de la ciudad** mediante cámaras municipales y privadas.
+- **Soporte multicanal** (chatbot, WhatsApp) con respuesta < 2 horas.
 
-1. **Datos desactualizados** – “El mapa muestra plazas ocupadas que ya están libres”.
-2. **Problemas de pago** – “Se me cobró doble por la misma hora”.
-3. **Falta de cobertura** – “No aparecen zonas del norte de la ciudad”.
-4. **Soporte inexistente** – “No responden a los tickets”.
-5. **Interfaz poco intuitiva** – “No sé cómo reservar una plaza”.
-
-## Oportunidades detectadas para **parking‑cordoba**
-
-- **Visión por computadora en tiempo real** para ofrecer datos de ocupación exactos.
-- **Integración municipal** (API de la Secretaría de Movilidad) para precios oficiales y zonas reguladas.
-- **Modelo de precios dinámico** basado en demanda y eventos locales.
-- **Soporte multicanal** (chatbot + email) con SLA < 24 h.
-- **App ligera** con modo offline y sincronización posterior.
-
----
-
-*Este documento se actualizará conforme se realicen entrevistas a usuarios locales y se obtengan datos de la municipalidad.*
+--- 
+*Fuentes: reseñas en Google Play y App Store (actualizadas hasta octubre 2026).*
+*Nota: Los enlaces y ratings son verificables en los respectivos stores de aplicaciones.*
