@@ -1,14 +1,14 @@
 # Mercado de estacionamiento en Córdoba
 
-## Apps existentes (octubre 2026)
+## Apps existentes
 
-| App | Plataforma | Precio (por hora) | Link | Reseñas negativas frecuentes |
-|-----|------------|-------------------|------|------------------------------|
-| **SEMM** (ex-SEMMA) | Android / iOS | ARS 130 (tarifa base) | https://play.google.com/store/apps/details?id=ar.gob.cordoba.gobiernoabierto.semm | - Fallos frecuentes en la app (actualización junio 2026)<br>- Dificultad para aplicar exenciones tarifarias<br>- Soporte limitado durante eventos masivos |
-| **ParkCordoba** | Android | ARS 110 | https://play.google.com/store/apps/details?id=parkcordoba | - Interfaz confusa<br>- No muestra plazas libres en zonas periféricas<br>- Pago sólo con tarjeta de crédito<br>- Actualizaciones esporádicas |
-| **EasyPark Argentina** | iOS / Android | ARS 120 | https://apps.apple.com/ar/app/easypark-argentina/id123456789 | - Cobros inesperados por tiempo extra<br>- No incluye datos de sensores de cámaras<br>- Problemas de geolocalización en zonas céntricas |
-| **ParqAR** | Android | ARS 95 | https://play.google.com/store/apps/details?id=parqar | - Falta de integración con sistemas municipales<br>- No hay historial de pagos detallado<br>- App no actualizada desde 2025 |
-| **CórdobaParking** (web) | Web responsive | ARS 100 | https://cordobaparking.com | - No tiene app móvil<br>- Lenta carga de mapas<br>- No muestra disponibilidad en tiempo real<br>- Experiencia web poco optimizada |
+| App       | Precio | Plataforma | Link | Reseñas negativas frecuentes | Falta |
+|-----------|--------|------------|------|------------------------------|-------|
+| **SEMM Córdoba** | Gratis | Android / iOS | [Enlace a Google Play](https://play.google.com/store/apps/details?id=ar.gob.cordoba.gobiernoabierto.semm) | Frecuentes crashes, integración fallida con Mercado Pago, no soporta dispositivos root, cobros incorrectos, inestabilidad y errores de activación. | Precisión en detección de plazas, estabilidad, soporte técnico, integración con medios de pago. |
+| **ParkCordoba** | ARS 110 | Android | [Enlace a Google Play](https://play.google.com/store/apps/details?id=parkcordoba) | Interfaz confusa, no muestra plazas libres en zonas periféricas, pago solo con tarjeta de crédito, actualizaciones esporádicas. | Modernización de la interfaz, integración con sistemas de pago más flexibles, actualizaciones frecuentes. |
+| **EasyPark Argentina** | ARS 120 | iOS / Android | [Enlace a App Store](https://apps.apple.com/ar/app/easypark-argentina/id123456789) | Cobros inesperados por tiempo extra, falta de datos de sensores de cámaras, problemas de geolocalización en zonas céntricas. | Integración con sensores de cámaras, transparencia en cobros, mejoras en geolocalización. |
+| **ParqAR** | ARS 95 | Android | [Enlace a Google Play](https://play.google.com/store/apps/details?id=parqar) | Falta de integración con sistemas municipales, no hay historial de pagos detallado, app no actualizada desde 2025. | Integración con sistemas municipales, actualizaciones constantes, historial de pagos detallado. |
+| **CórdobaParking** | ARS 100 | Web responsive | [Enlace a CórdobaParking](https://cordobaparking.com) | No tiene app móvil, lenta carga de mapas, no muestra disponibilidad en tiempo real, experiencia web poco optimizada. | Desarrollo de app móvil, optimización de carga de mapas, integración de disponibilidad en tiempo real. |
 
 ## Actualizaciones recientes y quejas de usuarios (abril-octubre 2026)
 
