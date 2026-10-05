@@ -46,4 +46,4 @@
 
 ---
 
-*Este documento se actualizó en octubre 2026 con datos relevantes hasta la fecha. Se recomienda validar información de precios y funcionalidades directamente en las tiendas de aplicaciones antes de tomar decisiones comerciales.*
+*Este documento se actualizó el 5 de octubre de 2026 con datos relevantes hasta la fecha. Se recomienda validar información de precios y funcionalidades directamente en las tiendas de aplicaciones antes de tomar decisiones comerciales.*
