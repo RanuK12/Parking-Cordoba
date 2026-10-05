@@ -1,0 +1,10 @@
+{
+  "repo_slug": "RanuK12/Parking-Cordoba",
+  "bounty_id": "parking-cordoba-mercado-update",
+  "issue": 4,
+  "description": "Actualización del documento de mercado para estacionamiento en Córdoba (octubre 2026).",
+  "author": "RanuK12",
+  "files_changed": ["docs/mercado.md"],
+  "timestamp": "2026-10-05T19:30:00Z",
+  "issue_link": "https://github.com/RanuK12/Parking-Cordoba/issues/4"
+}
