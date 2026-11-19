@@ -1,0 +1,9 @@
+{
+  "repo_path": "/Users/emilioranucoli/.ranukita/projects/parking-cordoba",
+  "repo_owner": "RanuK12",
+  "repo_name": "parking-cordoba",
+  "branch": "ranukita/af6cf4",
+  "files": ["README.md", "detect_parking.py", "requirements.txt", ".gitignore", "docs/mercado.md"],
+  "change_type": "feature",
+  "description": "Añade el documento maestro completo con especificación técnica, modelo de negocio y plan de piloto. Incluye prototipo funcional de detección de vehículos con YOLOv8."
+}
