@@ -2,6 +2,10 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 import argparse
+import json
+
+# IDs de clase COCO que son vehículos (relevantes para estacionamiento)
+VEHICLE_CLASSES = {2: 'car', 3: 'motorcycle', 5: 'bus', 7: 'truck'}
 
 # Cargar modelo YOLO preentrenado
 model = YOLO('yolov8n.pt')
@@ -13,17 +17,25 @@ def detect_parking_spaces(frame):
     
     occupied = []
     free = []
+    detections = []
     for box in boxes:
         x1, y1, x2, y2 = box.xyxy[0]
-        # Lógica para determinar si el espacio está ocupado (ej: tamaño del bbox)
-        if (x2 - x1) * (y2 - y1) > 10000:  # Umbral arbitrario
+        cls_id = int(box.cls[0])
+        conf = float(box.conf[0])
+        detections.append({
+            'class': VEHICLE_CLASSES.get(cls_id, str(cls_id)),
+            'confidence': round(conf, 2),
+            'bbox': [int(x1), int(y1), int(x2), int(y2)],
+        })
+        # Lógica para determinar si el espacio está ocupado (vehículo real detectado)
+        if cls_id in VEHICLE_CLASSES:
             occupied.append((int(x1), int(y1), int(x2), int(y2)))
         else:
             free.append((int(x1), int(y1), int(x2), int(y2)))
     
-    return occupied, free
+    return occupied, free, detections
 
-def process_video(video_path, output_path):
+def process_video(video_path, output_path, json_out=False):
     cap = cv2.VideoCapture(video_path)
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     out = cv2.VideoWriter(output_path, fourcc, 20.0, (int(cap.get(3)), int(cap.get(4))))
@@ -33,7 +45,7 @@ def process_video(video_path, output_path):
         if not ret:
             break
         
-        occupied, free = detect_parking_spaces(frame)
+        occupied, free, detections = detect_parking_spaces(frame)
         for (x1, y1, x2, y2) in occupied:
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 2)
         for (x1, y1, x2, y2) in free:
@@ -48,15 +60,19 @@ def process_video(video_path, output_path):
     out.release()
     cv2.destroyAllWindows()
 
+    if json_out:
+        print(json.dumps({'detections': detections, 'occupied': len(occupied), 'free': len(free)}, ensure_ascii=False))
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--input', required=True, help='Ruta al archivo de imagen/video')
     parser.add_argument('--output', default='output.mp4', help='Ruta de salida para video procesado')
+    parser.add_argument('--json', action='store_true', help='Imprimir detecciones en JSON a stdout')
     args = parser.parse_args()
 
     if args.input.endswith(('.jpg', '.png')):
         frame = cv2.imread(args.input)
-        occupied, free = detect_parking_spaces(frame)
+        occupied, free, detections = detect_parking_spaces(frame)
         for (x1, y1, x2, y2) in occupied:
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 2)
         for (x1, y1, x2, y2) in free:
@@ -64,8 +80,11 @@ def main():
         cv2.imshow('Parking Detection', frame)
         cv2.waitKey(0)
         cv2.imwrite('output.jpg', frame)
+
+        if args.json:
+            print(json.dumps({'detections': detections, 'occupied': len(occupied), 'free': len(free)}, ensure_ascii=False))
     else:
-        process_video(args.input, args.output)
+        process_video(args.input, args.output, json_out=args.json)
 
 if __name__ == '__main__':
     main()
