@@ -1,7 +1,7 @@
 {
   "repo": "RanuK12/parking-cordoba",
   "branch": "ranukita/feature-json-output",
-  "commit": "ecd1267",
+  "commit": "a2f1b9c",
   "files": ["detect_parking.py"],
   "changes": "Agrega soporte para --json-out para exportar detecciones en formato JSON",
   "size": "small",
