@@ -29,7 +29,7 @@ def detect_parking_spaces(frame):
         cls_id = int(box.cls[0])
         conf = float(box.conf[0])
         detections.append({
-            'class': VEHICLE_CLASSES.get(cls_id, str(cls_id)),
+            'clase': VEHICLE_CLASSES.get(cls_id, str(cls_id)),
             'confidence': round(conf, 2),
             'bbox': [int(x1), int(y1), int(x2), int(y2)],
         })
@@ -58,7 +58,7 @@ def process_video(video_path, output_path, json_out_path=None, display=True):
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     out = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
 
-    all_detections = []
+    all_frames = []
     frame_idx = 0
     while cap.isOpened():
         ret, frame = cap.read()
@@ -66,10 +66,14 @@ def process_video(video_path, output_path, json_out_path=None, display=True):
             break
 
         occupied, detections = detect_parking_spaces(frame)
-        all_detections.append({
+        vehiculos = [d for d in detections if d['clase'] in VEHICLE_CLASSES.values()]
+        all_frames.append({
             'frame': frame_idx,
-            'occupied': len(occupied),
-            'detections': detections,
+            'vehiculos': [{
+                'bbox': d['bbox'],
+                'clase': d['clase'],
+                'confianza': d['confidence'],
+            } for d in vehiculos],
         })
         annotate_frame(frame, occupied)
 
@@ -86,10 +90,11 @@ def process_video(video_path, output_path, json_out_path=None, display=True):
         cv2.destroyAllWindows()
 
     if json_out_path:
+        video_name = os.path.basename(video_path)
         with open(json_out_path, 'w', encoding='utf-8') as f:
-            json.dump({'frames': all_detections}, f, ensure_ascii=False, indent=2)
+            json.dump({'video': video_name, 'fps': fps, 'frames': all_frames}, f, ensure_ascii=False, indent=2)
 
-    return all_detections
+    return all_frames
 
 
 def process_image(image_path, output_path, json_out_path=None, display=True):
@@ -99,14 +104,16 @@ def process_image(image_path, output_path, json_out_path=None, display=True):
         sys.exit(1)
 
     occupied, detections = detect_parking_spaces(frame)
+    vehiculos = [d for d in detections if d['clase'] in VEHICLE_CLASSES.values()]
     annotate_frame(frame, occupied)
 
     cv2.imwrite(output_path, frame)
 
-    result = {'occupied': len(occupied), 'detections': detections}
+    result = {'occupied': len(occupied), 'vehiculos': vehiculos}
     if json_out_path:
+        video_name = os.path.basename(image_path)
         with open(json_out_path, 'w', encoding='utf-8') as f:
-            json.dump(result, f, ensure_ascii=False, indent=2)
+            json.dump({'video': video_name, 'fps': 0, 'frames': [{'frame': 0, 'vehiculos': vehiculos}]}, f, ensure_ascii=False, indent=2)
     else:
         print(json.dumps(result, ensure_ascii=False))
 
