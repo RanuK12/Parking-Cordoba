@@ -1,0 +1,15 @@
+{
+  "repo": "RanuK12/parking-cordoba",
+  "branch": "ranukita/feature-json-output",
+  "commit": "ecd1267",
+  "files": ["detect_parking.py"],
+  "changes": "Agrega soporte para --json-out para exportar detecciones en formato JSON",
+  "size": "small",
+  "test": "Verificado: detect_parking.py --input test.jpg --output out.jpg --json-out out.json funciona",
+  "purpose": "Implementa requisito clave de SPEC.md: salida estructurada JSON para integración",
+  "dependencies": ["ultralytics", "opencv-python", "numpy"],
+  "style": "Mantiene compatibilidad con salida existente (video anotado)",
+  "requested_by": "spec",
+  "type": "feature",
+  "impact": "Permite exportar resultados para integración con sistemas externos"
+}
