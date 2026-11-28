@@ -1,0 +1,37 @@
+{
+  "project": "parking-cordoba",
+  "feature": "JSON output option",
+  "status": "completed",
+  "date": "2026-11-28",
+  "technical_specs": {
+    "output_format": "JSON",
+    "structure": {
+      "video": "string",
+      "fps": "number",
+      "frames": "array"
+    },
+    "supported_classes": [
+      "car",
+      "truck",
+      "bus",
+      "motorcycle"
+    ]
+  },
+  "market_analysis": {
+    "target_users": [
+      "municipalities",
+      "parking operators",
+      "developers"
+    ],
+    "use_cases": [
+      "real-time monitoring",
+      "analytics",
+      "integration"
+    ],
+    "technical_benefits": [
+      "structured output",
+      "API compatibility",
+      "processing efficiency"
+    ]
+  }
+}

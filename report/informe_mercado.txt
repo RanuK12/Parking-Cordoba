@@ -1,0 +1,12 @@
+INFORME DE MERCADO - PARKING CORDOBA
+========================================
+
+Proyecto: Sistema de estacionamiento en tiempo real
+Feature: Salida JSON para integración
+Estado: Completado
+Fecha: 2026-11-28
+
+Beneficios:
+- Estructuración de datos
+- Compatibilidad API
+- Procesamiento eficiente
